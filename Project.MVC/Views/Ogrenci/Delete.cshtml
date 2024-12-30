@@ -1,0 +1,13 @@
+﻿@model Project.MVC.Models.Ogrenci
+
+<h2>Öğrenci Sil</h2>
+<p>Bu öğrenciyi silmek istediğinizden emin misiniz?</p>
+<div>
+    <p><strong>Ad:</strong> @Model.Name</p>
+    <p><strong>Soyad:</strong> @Model.Surname</p>
+</div>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</form>

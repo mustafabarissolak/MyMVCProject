@@ -1,0 +1,18 @@
+﻿@model Project.MVC.Models.Ogrenci
+
+<h2>Öğrenci Düzenle</h2>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Ad:</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Soyad:</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+<a asp-action="Index">Geri Dön</a>
